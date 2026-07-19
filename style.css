@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+     background-image: url("./Images/ChatGPT\ Image\ Jul\ 15\,\ 2026\,\ 12_36_23\ AM.png");   /* Replace with your image path */
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    min-height:100vh;
+    overflow-x:hidden;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.page1{
+    width: 90%;
+    margin: auto;
+    height: 80px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    list-style: none;
+    gap: 45px;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: .3s;
+}
+.nav a:hover{
+    color: aqua;
+}
+
+.main{
+    width:90%;
+    margin:auto;
+    height:75vh;
+    display: flex;
+    align-items: center;
+}
+.hello{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-top:140px;   
+}
+.hello h3{
+    color:white;
+    font-size:28px;
+    line-height:32px;
+}
+.name{
+    color: white;
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.scroll{
+
+    position:absolute;
+
+    left:70px;
+
+    bottom:60px;
+
+}
+
+.scroll-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:15px 32px;
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    overflow:hidden;
+
+    position:relative;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+    transition:.45s;
+
+}
+
+.scroll-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.25),
+
+    transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+.scroll-btn:hover::before{
+
+    left:120%;
+
+}
+
+.scroll-btn:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#7d6bff;
+
+    box-shadow:
+
+    0 0 25px rgba(125,107,255,.5);
+
+}
+
+.arrow{
+
+    font-size:22px;
+
+    animation:bounce 1.2s infinite;
+
+}
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
