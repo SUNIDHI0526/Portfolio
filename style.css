@@ -1,189 +1,112 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
-body{
-     background-image: url("./Images/ChatGPT\ Image\ Jul\ 15\,\ 2026\,\ 12_36_23\ AM.png");   /* Replace with your image path */
 
+body{
+    width:100%;
+    height:100vh;
+    background-image:url("./Images/WhatsApp\ Image\ 2026-07-20\ at\ 11.17.24\ PM\ \(1\).jpeg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     background-attachment:fixed;
-
-    min-height:100vh;
-    overflow-x:hidden;
     color:white;
-    font-family:Arial, Helvetica, sans-serif;
+    overflow:hidden;
+    position:relative;
 }
 
-.page1{
-    width: 90%;
-    margin: auto;
-    height: 80px;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.nav{
-    display: flex;
-    list-style: none;
-    gap: 45px;
-}
-.nav a{
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    transition: .3s;
-}
-.nav a:hover{
-    color: aqua;
-}
-
-.main{
+.hero{
     width:90%;
+    height:100vh;
+
     margin:auto;
-    height:75vh;
-    display: flex;
-    align-items: center;
-}
-.hello{
+
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    margin-top:140px;   
-}
-.hello h3{
-    color:white;
-    font-size:28px;
-    line-height:32px;
-}
-.name{
-    color: white;
-    font-size: 80px;
-    font-weight: 900;
-    letter-spacing: -5px;
-}
 
-.scroll{
+    justify-content:center;   
+    align-items:flex-start;   
 
-    position:absolute;
-
-    left:70px;
-
-    bottom:60px;
-
-}
-
-.scroll-btn{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    text-decoration:none;
-
-    color:white;
-
-    padding:15px 32px;
-
-    border-radius:50px;
-
-    border:1px solid rgba(255,255,255,.15);
-
-    background:rgba(255,255,255,.05);
-
-    backdrop-filter:blur(15px);
-
-    overflow:hidden;
+    padding-left:100px;    
 
     position:relative;
-
-    letter-spacing:3px;
-
-    font-weight:600;
-
-    transition:.45s;
-
+    z-index:2;
 }
 
-.scroll-btn::before{
+.intro{
+    font-size:26px;
+    color:#8fd1ff;
+    letter-spacing:5px;
+    margin-bottom:18px;
+}
+
+.name{
+    font-size:85px;
+    line-height:85px;
+    font-weight:800;
+    margin-bottom:25px;
+
+    text-shadow:
+    0 0 15px rgba(120,170,255,.5),
+    0 0 40px rgba(120,170,255,.3);
+}
+
+.role{
+    font-size:32px;
+    color:#8fd1ff;
+    margin-bottom:30px;
+}
+
+.desc,
+.desc2{
+    width:600px;
+    font-size:18px;
+    line-height:30px;
+    color:#ddd;
+}
+
+.hero::before{
 
     content:"";
-
     position:absolute;
+    left:30px;
+    top:50%;
+    transform:translateY(-50%);
+    width:4px;
+    height:220px;
+    border-radius:10px;
+    background:linear-gradient(#7f5cff,#53b8ff);
+}
 
-    top:0;
-
-    left:-120%;
-
-    width:100%;
-
-    height:100%;
-
-    background:linear-gradient(
-
-    90deg,
-
-    transparent,
-
-    rgba(255,255,255,.25),
-
-    transparent
-
-    );
-
-    transition:.8s;
+.name:hover{
+    text-shadow:
+    0 0 20px #84b5ff,
+    0 0 45px #5b8fff,
+    0 0 80px rgba(91,143,255,.4);
 
 }
 
-.scroll-btn:hover::before{
-
-    left:120%;
-
-}
-
-.scroll-btn:hover{
-
-    transform:translateY(-6px);
-
-    border-color:#7d6bff;
-
-    box-shadow:
-
-    0 0 25px rgba(125,107,255,.5);
+::selection{
+    background:#6f6cff;
+    color:white;
 
 }
 
-.arrow{
-
-    font-size:22px;
-
-    animation:bounce 1.2s infinite;
-
+.scroll-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background: #333;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
 }
 
-@keyframes bounce{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(6px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
-
+.scroll-btn:hover {
+    background: #555;
 }
