@@ -8,105 +8,112 @@
 body{
     width:100%;
     height:100vh;
-    background-image:url("./Images/WhatsApp\ Image\ 2026-07-20\ at\ 11.17.24\ PM\ \(1\).jpeg");
+    background-image:url("./Images/ChatGPT\ Image\ Jul\ 20\,\ 2026\,\ 08_06_12\ PM.png");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     background-attachment:fixed;
-    color:white;
+    color:#fff;
     overflow:hidden;
-    position:relative;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
 }
 
 .hero{
-    width:90%;
+    width:100%;
     height:100vh;
-
-    margin:auto;
-
     display:flex;
     flex-direction:column;
-
-    justify-content:center;   
-    align-items:flex-start;   
-
-    padding-left:100px;    
-
+    justify-content:center;
+    align-items:center;
+    text-align:center;
     position:relative;
-    z-index:2;
+    z-index:1;
+    padding:20px;
 }
-
 .intro{
-    font-size:26px;
-    color:#8fd1ff;
+    font-size:18px;
     letter-spacing:5px;
-    margin-bottom:18px;
+    color:#8bbdff;
+    margin-bottom:15px;
+    font-weight:500;
 }
 
 .name{
-    font-size:85px;
-    line-height:85px;
-    font-weight:800;
-    margin-bottom:25px;
+    font-size:90px;
+    line-height:90px;
+    font-weight:700;
+    margin-bottom:20px;
+}
 
-    text-shadow:
-    0 0 15px rgba(120,170,255,.5),
-    0 0 40px rgba(120,170,255,.3);
+.name span{
+    color:#8bbdff;
+}
+
+.name:hover{
+    color:#8bbdff;
+    transition:.3s;
+}
+
+.name:hover span{
+    color:white;
 }
 
 .role{
-    font-size:32px;
-    color:#8fd1ff;
-    margin-bottom:30px;
+    font-size:28px;
+    color:#8bbdff;
+    font-weight:500;
+    margin-bottom:25px;
+}
+
+.role::after{
+    content:"";
+    display:block;
+    width:70px;
+    height:3px;
+    background:#8bbdff;
+    margin:12px auto 0;
 }
 
 .desc,
 .desc2{
-    width:600px;
+    width:650px;
+    max-width:90%;
     font-size:18px;
     line-height:30px;
-    color:#ddd;
+    color:#e0e0e0;
 }
 
-.hero::before{
-
-    content:"";
-    position:absolute;
-    left:30px;
-    top:50%;
-    transform:translateY(-50%);
-    width:4px;
-    height:220px;
-    border-radius:10px;
-    background:linear-gradient(#7f5cff,#53b8ff);
+.desc{
+    margin-bottom:10px;
 }
 
-.name:hover{
-    text-shadow:
-    0 0 20px #84b5ff,
-    0 0 45px #5b8fff,
-    0 0 80px rgba(91,143,255,.4);
+.scroll-btn{
+    margin-top:40px;
+    padding:14px 34px;
+    border:2px solid #8bbdff;
+    border-radius:30px;
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:500;
+    transition:.3s;
+}
 
+.scroll-btn:hover{
+    background:#8bbdff;
+    color:#111;
 }
 
 ::selection{
-    background:#6f6cff;
-    color:white;
-
-}
-
-.scroll-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    color: white;
-    background: #333;
-    border-radius: 30px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
-
-.scroll-btn:hover {
-    background: #555;
+    background:#8bbdff;
+    color:#111;
 }
